@@ -18,8 +18,8 @@ beforeEach(function() {
 });
 
 afterEach(function() {
-  console.log.restore();
-  childProcess.fork.restore();
+  if(console.log.restore) console.log.restore();
+  if(childProcess.fork.restore) childProcess.fork.restore();
 });
 
 /**
